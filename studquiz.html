@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<!-- <meta name="viewport" content="width= device-width, initial-scale=1.0"> -->
+<style>
+  .row{
+    background-color: #ffb347;
+    height: 15em;
+  }
+  form {
+    height: 100%;
+  width: 60em; 
+  font-family: sans-serif;
+  position: fixed;
+  top: 0px;
+}
+.rowdown{
+  height: 25em;
+  float: center;
+  text-align: center; 
+  margin-top: 0%;
+  width: 100%;
+
+}
+.rowtown{
+  height: 25em;
+  float: center;
+  text-align: center;
+  margin-top: 10%;
+  width: 100%;
+}
+.set-btn {
+  /*width: auto;*/
+background-position: left;
+}
+.nextleft{
+  background-position: left;
+}
+.nextright{
+  background-position: right;
+}
+.newevent{
+  background-position: center;
+}
+.a-btn, .b-btn, .c-btn, .d-btn{
+  background-position: left;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  height: 5em;
+}
+
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 40px;
+  transition: 0.2s;
+  height: 5em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+ul li:nth-child(odd) {
+  background: #f6d18b;
+  height: 5em;
+}
+
+
+
+ul li:hover {
+  background: white;
+  height: 5em;
+}
+
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  height: 5em;
+  text-decoration: line-through;
+}
+
+
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 30px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 5em;;
+  width: 10px;
+}
+table{
+  width: 100%;
+  height: 60em;
+  text-align: center;
+}
+th, td{
+  font-size: 40px;
+}
+h1{
+  font-size: 80px;
+  text-align: center;
+}
+.question{
+  border:3px solid #ffb347;
+  width: 70%;
+  height: 20em;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+</style>
+<body>
+<form>
+<div class="row">
+  <br><br><br><br><br>
+  <button class="set-btn-btn" style=" height: 40%;width: 10%; margin-left: 7%; background-color:orange; " ><img src="img/SETTI.png" style=" height: 100%;width: 120%; margin-right: 100%;" >
+  </button>
+  <label style="font-size: 60px; margin-top: 20%; color: white; margin-left: 20%;"></label>
+</div>
+<div class="rowdown">
+  <br><br>
+  <button class="nextleft-btn-btn" style=" height: 20%; background-color:#ffb347;width: 30%; margin-left: 2%; font-size: 60px;" >
+  PREV</button>
+  <button class="rightleft-btn-btn" style=" height: 20%;  background-color:#ffb347; width: 30%; margin-left: 13%;font-size: 60px;"> NEXT</button>
+  <label><h1>00:00:00</h1></label>
+    <div class="question">
+      <h2>How do you write "Hello World" in an alert box?</h2>
+    </div>
+    <br><br>
+    <br><br>
+    <button class="a-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 20%; margin-left: -10px; ">A</button>
+  <button class="a-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 80%; ">'msg("Hello World");'</button>
+  <br><br><br>
+  <button class="b-btn-btn" style=" height: 20%; border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 20%; margin-left: -10px; ">B</button>
+    <button class="a-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 80%;">'alert("Hello World");'</button>
+  <br><br><br>
+  <button class="c-btn-btn" style=" height: 20%; border: 3px solid #ffb347;  background-color: white;
+  color: black; font-size: 60px; width: 20%; margin-left: -10px; " >C</button>
+    <button class="a-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 80%;">'alert("Hello World");'</button>
+  <br><br><br>
+  <button class="d-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 20%; margin-left: -10px;">D</button>
+    <button class="a-btn-btn" style=" height: 20%;  border: 3px solid #ffb347; background-color: white;
+  color: black; font-size: 60px; width: 80%;">'alertBox("Hello World")'</button>
+
+
+
+<div class="footer" style="margin-top:40em; text-align: center; font-size: 40px; color :#f03528;">
+  <p>Copyright 2017 | Prof-Aux App</p>
+</div>
+
+</body>
+</html>

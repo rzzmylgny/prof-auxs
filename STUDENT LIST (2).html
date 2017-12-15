@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .row{
+    background-color: #ffb347;
+    height: 15em;
+  }
+  form {
+    height: 100%;
+  width: 60em; 
+  font-family: sans-serif;
+  position: fixed;
+  top: 0px;
+}
+.rowdown{
+  height: 25em;
+  float: center;
+  text-align: center; 
+  margin-top: 0%;
+  width: 100%;
+
+}
+.set-btn {
+  /*width: auto;*/
+background-position: left;
+}
+.next-btn {
+  /*width: auto;*/
+background-position: right;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  height: 5em;
+}
+
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background:lightgray;
+  font-size: 40px;
+  transition: 0.2s;
+  height: 5em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+ul li:nth-child(odd) {
+  background: white;
+  height: 5em;
+}
+
+
+
+ul li:hover {
+  background: white;
+  height: 5em;
+}
+
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  height: 5em;
+  text-decoration: line-through;
+}
+
+
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 30px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 5em;;
+  width: 10px;
+}
+#myInput{
+  background-image:url/*('/img/search.png');*/
+  background-position: 5px 10px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border:1px solid #ddd;
+  margin-bottom: 12px; 
+}
+#myTable{
+border-collapse: collapse;
+width: 100%;
+border:1px solid #ddd;
+font-size: 18px;
+}
+#myTable th,#myTable td{
+text-align: left;
+padding:12px;
+}
+#myTable tr{
+border-bottom: 1px solid #ddd;
+}
+#myTable tr.header,#myTable tr:hover{
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+<form>
+<div class="row">
+  <br><br><br><br><br>
+    <button class="set-btn-btn" style=" height: 40%;width: 10%; margin-left: 7%; background-color:orange; " ><img src="img/SETTI.png" style=" height: 100%;width: 120%; margin-right: 100%;" >
+  </button>
+    <label style="font-size: 60px; margin-top: 20%; color: white; margin-left: 20%;">STUDENT LIST</label>
+    
+</div>
+<div class="rowdown">
+  <ul id="myUL">
+<h2>STUDENT LIST</h2>
+<input type="text" id="myInput" onKeyup="myFunction()" placeholder=" search by STUDENT..."
+
+ title=" Type in a name">
+
+<table id="myTable">
+<tr class="header">
+<th style="width:60%;">STUDENT</th>
+<th style="width:40%;">YEAR AND SECTION</tr>
+  
+  <tr>
+  <td>SHAIRA DEL CASTILLLO</td>
+  <td>BSCS4B</td>
+  </tr>
+
+  <tr>
+  <td>RIZZA MAE LAGUNOY</td>
+  <td>BSCS4B</td>
+  </tr>
+  </table>
+
+  <script>
+  function myFunction(){
+ var input,filter, table,tr,td,i;
+ input=document.getElementById("myInput");
+ filter=input.value.toUpperCase();
+ table=document.getElementByTagName("tr");
+ for(i=0; i< tr.length; i++){
+ td=tr[i].getElementByTagName("td")[0];
+
+ if(td){
+  if (td.innerHTML.toUpperCase()
+    .indexOf(filter) > -1){
+
+   tr[i].style.display="";
+  }else{
+    tr[i].style.display="none";
+
+     }
+   }
+  }
+}
+  </script>
+  </body>
+  </html>
+</ul>
+</div>
+</div>
+       
+</body>
+</html>

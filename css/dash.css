@@ -1,0 +1,44 @@
+  .row{
+  	margin-top: 5%;
+ height: 33em;
+  float: center;
+  text-align: center;
+  width: 100%;
+  }
+  form {
+  width: 60em; 
+  font-family: sans-serif;
+  position: fixed;
+/*  top: 0px;*/
+}
+.rowdown{
+ background-color: #ffb347;
+    text-align: center;
+    height: 75em;
+    width: 100%;
+}
+.row .col1{
+	border-radius: 50%;
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+}
+.rowdown .col2{
+	display: inline-block;
+	text-align: left;
+    width: 45%;
+    border-radius: 50%;
+}
+.rowdown .col3 {
+	display: inline-block;
+}
+.rowdown .col2 img {
+	width: 95%;
+}
+.rowdown .col3 img {
+	width: 250px;
+}
+label{
+	font-size: 50px;
+	text-align: center;
+}

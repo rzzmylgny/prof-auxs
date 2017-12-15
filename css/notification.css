@@ -1,0 +1,54 @@
+.row{
+    background-color: #ffb347;
+    height: 20em;
+  }
+  form {
+  	height: 100%;
+  width: 100%; 
+  font-family: sans-serif;
+  position: fixed;
+  top: 0px;
+}
+.rowdown{
+  height: 25em;
+  float: center;
+  text-align: center; 
+  margin-top: 0%;
+  width: 100%;
+
+}
+ul {
+  margin: 0;
+  padding: 0;
+  height: 5em;
+}
+
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 40px;
+  transition: 0.2s;
+  height: 5em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+ul li:nth-child(odd) {
+  background: #f6d18b;
+  height: 5em;
+}
+
+
+
+ul li:hover {
+  background: white;
+  height: 5em;
+}n

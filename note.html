@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/note.css">
+</head>
+<body>
+<form>
+<div class="row">
+  <br><br><br><br><br>
+    <button class="set-btn-btn" style=" height: 40%;width: 10%; margin-left: 7%;background-color:orange;" ><img src="img/SETTI.png" style=" height: 100%;width: 120%; margin-right: 100%;" > </button>
+    <label style="font-size: 60px; color: white; margin-left: 20%;">ORGANIZER</label>
+</div>
+<div class="rowdown">
+ <input type="text" id="myInput" placeholder="Title..." style="color: #f03528; height: 100%;"> 
+    <span onclick="newElement()" class="addBtn" style="height: 3em; width: 25%;background-color:orange;" ><img src="img/adda.png" style="height: 2.5em; width:88%;" ></span>
+  </div>
+<ul id="myUL">
+  <li>Hit the gym</li>
+  <li class="checked">Pay bills</li>
+  <li>Clean the Car</li>
+  <li>Buy Groceries</li>
+  <li>Read a book</li>
+  <li>Organize Home</li>
+</ul>
+</div>
+<script>
+var myNodelist = document
+.getElementsByTagName("LI");
+var i;
+for(i=0; i < myNodelist.length;i++){
+var span=document.createElement
+("SPAN");
+var txt=document.createTextNode
+("\u00D7");
+span.className = "close";
+span.appendChild(txt);
+myNodelist[i].appendChild(span);
+}
+var close = document
+.getElementsByClassName("close");
+var i;
+for(i=0; i < close.length;i++){
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+var list=document.querySelector('ul');
+list.addEventListener('click',
+function(ev) {
+if (ev.target.tagName === 'LI') {
+ev.target.classList.toggle('checked');
+  }
+}, false);
+
+function newElement() {
+var li=document.createElement("li");
+var inputValue=document
+.getElementById("myInput").value;
+var t = document.createTextNode
+(inputValue);
+ li.appendChild(t);
+ if (inputValue === '') {
+ alert("You must write something!");
+  } else {
+    document.getElementById("myUL")
+    .appendChild(li);
+  }
+  document.getElementById("myInput")
+  .value = "";
+var span=document.createElement
+("SPAN");
+var txt=document.createTextNode
+("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+<div class="footer" style="margin-top:120%; text-align: center; font-size: 40px; color :#f03528;">
+  <p>Copyright 2017 | Prof-Aux App</p>
+</div>
+</body>
+</form>
+</html>
